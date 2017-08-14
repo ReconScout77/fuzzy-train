@@ -75,6 +75,23 @@ namespace VideoGames.Models
        _id = (int) cmd.LastInsertedId;
     }
 
+    // public void Remove(int id)
+    // {
+    //    MySqlConnection conn = DB.Connection();
+    //    conn.Open();
+    //
+    //    var cmd = conn.CreateCommand() as MySqlCommand;
+    //    cmd.CommandText = @"DELETE FROM `games` (`title`) VALUES (@GamesTitle);";
+    //
+    //    MySqlParameter title = new MySqlParameter();
+    //    title.ParameterName = "@GamesTitle";
+    //    title.Value = this._title;
+    //    cmd.Parameters.Add(title);
+    //
+    //    cmd.ExecuteNonQuery();
+    //    _id = (int) cmd.LastInsertedId;
+    // }
+
     public static void DeleteAll()
     {
        MySqlConnection conn = DB.Connection();

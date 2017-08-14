@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+<h1>All Games</h1>
+
+<ol>
+  @foreach (var game in Model)
+  {
+  <li>@game.GetTitle()</li>
+  }
+</ol>
+
+
+<a href="/"><button>Home</button></a>
+<form action="/games/clear" method="post">
+  <button type="submit" name="button">Clear All</button>
+</form>
